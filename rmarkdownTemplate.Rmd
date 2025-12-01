@@ -5,7 +5,7 @@ author: "Your Name"
 date: "November 27, 2025"
 output: 
   bookdown::beamer_presentation2:
-    theme: "NewcastleGemini"
+    theme: "NewcastleUniversity"
     latex_engine: xelatex
     slide_level: 2
     toc: false

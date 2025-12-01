@@ -1,10 +1,13 @@
 .PHONY: all
 
 # Typing `make` or `make all` in terminal will generate all targets
-all: latex rmarkdown
+all: latex rmarkdown clean
 
-latex: latexGemini.tex
-	latexmk -pdfxe latexGemini.tex
+latex: latexTemplate.tex
+	latexmk -pdfxe latexTemplate.tex
 
-rmarkdown: rmarkdownGemini.Rmd
+rmarkdown: rmarkdownTemplate.Rmd
 	Rscript --vanilla -e 'rmarkdown::render("$<")'
+
+clean:
+	rm *.fdb_latexmk *.xdv *.toc *.snm *.out *.nav *.log *.fls *.aux *.blg *.bbl
