@@ -1,0 +1,100 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{NewcastleGemini}
+\usepackage{natbib}
+
+% \title[The Short Title]{The Big Main Title}
+\title[Template short title]{University LaTeX Template}
+\subtitle{An attempt to match the core brand assets}
+\author{Your Name}
+\date{November 27, 2025}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+  This is the template for creating beamer presentations via \LaTeX, using the style file (\texttt{beamerthemeNewcastleUniversity.sty}) that is based on the PowerPoint template in the University's asset library.
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Basic elements}
+\begin{frame}{Bullet points}
+  \begin{itemize}
+  \item This is the bold frame title below the line.
+  \item The "Project Overview" is above the line.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Colours}
+
+\end{frame}
+
+\begin{frame}{Equations}
+  $$\pi=3.14159265...$$
+
+  \begin{equation}
+    e^{i\pi}+1=0
+  \end{equation}
+  
+\end{frame}
+
+\begin{frame}{Theorems \& proofs}
+  
+  \begin{theorem}
+    $e^{i\pi}+1=0$ \label{euler}
+  \end{theorem}
+
+  The proof of Theorem \ref{euler} is as below:
+  
+  \begin{proof}
+    \begin{align*}
+      e^{i\pi}+1&=\cos\pi+i\sin\pi+1\\
+                &=-1+i\times0+1=0
+    \end{align*}
+  \end{proof}
+
+\end{frame}
+
+\begin{frame}{Pictures}
+
+\end{frame}
+
+\begin{frame}{Using references}
+
+  \citet{dbc21}
+
+\end{frame}
+
+\section{Features to add}
+
+\begin{frame}{Colours}
+  \begin{itemize}
+  \item Currently this theme doesn't support blue on white, unlike the PowerPoint template
+  \item This likely requires another style file, or adding an option in the current style file
+  \item Also, it's unlikely to have slides of both colour schemes in a presentation
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Table of contents?}
+
+\end{frame}
+
+\begin{frame}{Section heading}
+
+  \begin{itemize}
+  \item A long section heading will get split into multiple lines
+  \item Subsequent lines doesn't get indented - to be fixed
+  \end{itemize}
+
+\end{frame}
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
