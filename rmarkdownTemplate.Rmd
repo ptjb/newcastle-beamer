@@ -1,4 +1,7 @@
 ---
+# Copyright 2025 by Clement Lee
+# This file may be distributed and/or modified
+# under the GNU Public License (>= 3).
 title: "University R Markdown Template" # this gets overridden by the header-includes below when output is beamer_presentation
 subtitle: "An attempt to match the core brand assets"
 author: "Your Name"
@@ -23,12 +26,16 @@ This is the template for creating beamer presentations via R Markdown, using the
 
 ## Bullet points
 
-* **Top:** "Short Title Here" is above the line.
-* **Top Right:** Logo.
-* **Middle:** This frame title ("Introduction") is bold and below the line.
-* **Bottom:** Red line and slogan.
+* **Above cyan line**: short title of the presentation if exists, otherwise the presentation title.
+* *Top Right*: logo.
+* *Below cyan line*: frame heading.
+* `Below red line`: slogan.
 
 ## Colours
+
+1. We can make custom colours using the \texttt{\textbackslash textcolor} command e.g. \textcolor{red}{red}.
+2. Note that \LaTeX commands are used to make this work.
+3. See next section on general colour scheme and background colours.
 
 ## Equations
   $$\pi=3.14159265...$$
@@ -54,9 +61,16 @@ The proof of Theorem \@ref(thm:euler-identity) is as below:
 
 ## Pictures
 
+```{r, echo = FALSE, out.width = "80%"}
+#| fig.cap: "https://xkcd.com/1638/"
+knitr::include_graphics("images/backslashes.png")
+```
+
 ## Using references
 
-@dbc21
+* We can cite others via bibliography management.
+* This means putting the references in a `.bib` file, and using an `@` command when citing.
+* Example: @dbc21
 
 # Dynamic generation of results using `R`
 
@@ -67,6 +81,7 @@ knitr::opts_chunk$set(dev.args = list(bg = "white"))
 ```
 
 ```{r}
+#| highlight: false
 head(cars)
 ```
 

@@ -2,7 +2,6 @@
 
 # Outside the sty, tex & Rmd template
 
-* Add Licence as standalone file & in scripts
 * Add README
 * Init Github & push
 * Share on TRS, school wiki?

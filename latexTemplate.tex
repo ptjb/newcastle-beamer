@@ -1,3 +1,8 @@
+% Copyright 2025 by Clement Lee
+%
+% This file may be distributed and/or modified
+% under the GNU Public License (>= 3).
+
 \documentclass[aspectratio=169]{beamer}
 \usetheme{NewcastleUniversity}
 \usepackage{natbib}
@@ -25,12 +30,19 @@
 \section{Basic elements}
 \begin{frame}{Bullet points}
   \begin{itemize}
-  \item This is the bold frame title below the line.
-  \item The "Project Overview" is above the line.
+  \item \textbf{Above cyan line}: short title of the presentation if exists, otherwise the presentation title.
+  \item \textit{Top Right}: logo.
+  \item \emph{Below cyan line}: frame heading.
+  \item \texttt{Below red line}: slogan.
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Colours}
+
+  \begin{enumerate}
+  \item We can make custom colours using the \texttt{\textbackslash{}textcolor} command e.g. \textcolor{red}{red}.
+  \item See next section on general colour scheme and background colours.
+  \end{enumerate}
 
 \end{frame}
 
@@ -61,12 +73,17 @@
 \end{frame}
 
 \begin{frame}{Pictures}
+  \includegraphics[width=0.8\linewidth]{images/backslashes.png}
 
 \end{frame}
 
 \begin{frame}{Using references}
 
-  \citet{dbc21}
+  \begin{itemize}
+  \item We can cite others via bibliography management.
+  \item This means putting the references in a \texttt{.bib} file, and using a \texttt{\textbackslash{}cite$^{*}$} command when citing.
+  \item Example: \citet{dbc21}
+  \end{itemize}
 
 \end{frame}
 
@@ -81,7 +98,12 @@
 
 \end{frame}
 
-\begin{frame}{Table of contents?}
+\begin{frame}{References}
+
+  \begin{itemize}
+  \item Currently the references are not displayed properly in the last slide.
+  \item The margins need to be readjusted for this.
+  \end{itemize}
 
 \end{frame}
 
