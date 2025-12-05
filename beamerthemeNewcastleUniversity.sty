@@ -76,7 +76,12 @@ ItalicFont  = *-Italic
     % 1. Short Title (Top Left - Above the line)
     \node[anchor=north west, inner sep=0, text width=12cm, color=InstCyan] 
     at ([xshift=1cm, yshift=-0.5cm]current page.north west) {
-      \fontsize{10}{12}\selectfont \insertshorttitle
+      \fontsize{10}{12}\selectfont
+      \ifnum\value{section}=0
+      \insertshorttitle
+      \else
+      \insertsectionhead
+      \fi
     };
 
     % 2. Cyan Line (The divider)
