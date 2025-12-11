@@ -1,6 +1,6 @@
 # Newcastle University beamer theme (2025-12-11)
 
-This repository contains the templates for creating beamer slides using LaTeX or R Markdown, in the style according to [Newcastle University's visual identity](https://www.ncl.ac.uk/brand-hub/visual-identity/).
+This repository contains the templates for creating beamer slides using LaTeX or R Markdown, in the style of Newcastle University. While there's an alternative available at https://github.com/nitrogl/nclbeamer, here we are matching the PowerPoint template according to [University's visual identity](https://www.ncl.ac.uk/brand-hub/visual-identity/).
 
 ## LaTeX
 
@@ -23,6 +23,13 @@ This repository contains the templates for creating beamer slides using LaTeX or
 * If you use make via a terminal, type `make rmarkdown`. The `makefile` contains the same command as above.
 
 * The file `rmarkdownTemplate.pdf` is the expected output. Rename it first if you want to execute the above steps and compare with this expected output.
+
+## Using the style file generally
+
+* To be able to use the theme `NewcastleUniversity`:
+
+  1. `beamerthemeNewcastleUniversity.sty` and the associated files in `images/` have to be in the same folder as the `.tex` or `.Rmd` file you are writing.
+  2. alternatively, if you have rights to put them in the folder where other beamer themes sit, do so. On a Linux machine, the path is `/usr/share/texmf/tex/latex/beamer/themes/` or similar. 
 
 ## Features to add
 
