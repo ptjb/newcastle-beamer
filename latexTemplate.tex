@@ -6,6 +6,7 @@
 \documentclass[aspectratio=169]{beamer}
 \usetheme{NewcastleUniversity}
 \usepackage{natbib}
+\usepackage{caption}
 
 % \title[The Short Title]{The Big Main Title}
 \title[Template short title]{University LaTeX Template}
@@ -73,7 +74,15 @@
 \end{frame}
 
 \begin{frame}{Pictures}
+  \begin{itemize}
+  \item \texttt{\textbackslash{}caption} might not work, hence the use of:
+    \begin{enumerate}
+    \item the package \texttt{caption} in the preamble, \&
+    \item \texttt{\textbackslash{}captionof} here
+    \end{enumerate}
+  \end{itemize}
   \includegraphics[width=0.8\linewidth]{images/backslashes.png}
+  \captionof{figure}{https://xkcd.com/1638/}\label{fig:backslashes}
 
 \end{frame}
 
@@ -87,7 +96,7 @@
 
 \end{frame}
 
-\section{Features to add}
+\section{Features to add / fix}
 
 \begin{frame}{Colours}
   \begin{itemize}

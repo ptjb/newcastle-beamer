@@ -61,10 +61,12 @@ The proof of Theorem \@ref(thm:euler-identity) is as below:
 
 ## Pictures
 
+* `fig.cap` might not work properly as an R Markdown chunk option
+
 ```{r, echo = FALSE, out.width = "80%"}
-#| fig.cap: "https://xkcd.com/1638/"
 knitr::include_graphics("images/backslashes.png")
 ```
+Source: https://xkcd.com/1638/
 
 ## Using references
 
@@ -94,7 +96,11 @@ head(cars)
 plot(cars)
 ```
 
-# Features to add
+# Features to add / fix
+
+## Pictures
+
+* Fix the issue with the chunk option `fig.cap`
 
 ## Colours
 
