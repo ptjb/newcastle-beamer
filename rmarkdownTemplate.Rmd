@@ -121,4 +121,6 @@ plot(cars)
 * A long section heading will get split into multiple lines
 * Subsequent lines doesn't get indented - to be fixed
 
-## References
+# References
+
+## <!-- empty -->

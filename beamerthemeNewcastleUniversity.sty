@@ -9,6 +9,7 @@
 \RequirePackage{tikz}
 \RequirePackage{graphicx}
 \RequirePackage{ifxetex}
+\RequirePackage{etoolbox}
 
 % ENABLE BLOCKS
 % This gives the blocks rounded corners and a drop shadow,
@@ -230,6 +231,10 @@ ItalicFont  = *-Italic
 % Make block titles Bold to distinguish them from the body text
 % (since both have the same white background color)
 \setbeamerfont{block title}{series=\bfseries}
+
+% --- 10. BIBLIOGRAPHY TOP MARGIN ---
+% Add top margin to references slide only
+\AtBeginEnvironment{thebibliography}{\vspace*{0.8cm}}
 
 \mode
 <all>
