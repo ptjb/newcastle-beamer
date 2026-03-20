@@ -14,8 +14,10 @@
 % ENABLE BLOCKS
 % This gives the blocks rounded corners and a drop shadow,
 % making them look like "cards" on the dark background.
-\useinnertheme[shadow=true]{rounded}
+% \useinnertheme[shadow=true]{rounded}
 % has to include the above here to not overwrite the title page later
+
+\useinnertheme{circles} % blocks aren't floating now but we don't have the horrible low-res sphere bullet points. Fix later
 
 % --- 2. FONTS (XeLaTeX) ---
 \ifxetex
@@ -96,7 +98,7 @@ ItalicFont  = *-Italic
 
     % 4. Footer Slogan
     \node[anchor=south east, inner sep=0.3cm] at ([xshift=-0.6cm, yshift=-0.1cm]current page.south east) {
-      \footnotesize \bfseries From Newcastle. For the world.
+      \footnotesize \bfseries From Newcastle. For the world. \quad\insertframenumber/\inserttotalframenumber
     };
   \end{tikzpicture}
   \fi
@@ -164,7 +166,7 @@ ItalicFont  = *-Italic
 
         % 4. Footer Slogan
         \node[anchor=south east, inner sep=0.3cm] at ([xshift=-0.6cm, yshift=-0.1cm]current page.south east) {
-          \footnotesize \bfseries From Newcastle. For the world.
+          \footnotesize \bfseries From Newcastle. For the world.\quad\insertframenumber/\inserttotalframenumber
         };
       \end{tikzpicture}
     \end{frame}
