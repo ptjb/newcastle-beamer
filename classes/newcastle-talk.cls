@@ -7,6 +7,8 @@
 
 \LoadClass[noamsthm, aspectratio=169]{beamer}
 
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{0pt}
 % TODO work out how to get xelatex running with latexmk
 
 \@set@theme@

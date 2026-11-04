@@ -49,24 +49,7 @@ ItalicFont  = *-Italic
 \setbeamertemplate{navigation symbols}{}
 \setbeamersize{text margin left=1cm, text margin right=1cm}
 
-% --- 5. THE UNIFIED BACKGROUND TEMPLATE ---
-\setbeamertemplate{background}{
-
-  % --- LOGIC SWITCH ---
-  \ifnum\thepage=1\relax
-  % ============================
-  % PAGE 1: TITLE PAGE ELEMENTS
-  % ============================
-  \begin{tikzpicture}[remember picture, overlay]
-    \node[opacity=1, inner sep=0pt] at (current page.center) {
-      \includegraphics[width=\paperwidth, height=\paperheight]{images/background_main.png}
-    };
-  \end{tikzpicture}
-
-  \else
-  % ============================
-  % PAGE >1: CONTENT SLIDE ELEMENTS
-  % ============================
+\setbeamertemplate{headline}{
   \begin{tikzpicture}[remember picture, overlay]
     
     % --- COMMON ELEMENT: LOGO ---
@@ -92,17 +75,23 @@ ItalicFont  = *-Italic
     \draw[color=InstCyan, line width=0.5pt] 
     (current page.north west) ++(0.8cm, -1.0cm) -- ++(\paperwidth-1.6cm, 0);
 
-    % 3. Red Footer Line
-    \draw[color=InstRed, line width=3pt] 
-    (current page.south east) ++(-\paperwidth+0.8cm, 0.6cm) -- ++(\paperwidth-1.6cm, 0);
+  \end{tikzpicture}
+}
 
-    % 4. Footer Slogan
-    \node[anchor=south east, inner sep=0.3cm] at ([xshift=-0.6cm, yshift=-0.2cm]current page.south east) {
+\setbeamertemplate{footline}{
+  \begin{tikzpicture}
+    \draw[color=InstRed, line width=3pt] (0,0) (0.8cm, 0.5cm) -- (\paperwidth-0.8cm, 0.5cm);
+%
+% 4. Footer Slogan
+    \node at (\paperwidth-3.5cm,0.1cm) {
       \footnotesize \bfseries From Newcastle. For the world. \quad\insertframenumber/\inserttotalframenumber
     };
   \end{tikzpicture}
-  \fi
+  \vspace{2pt}
 }
+
+\defbeamertemplate{headline}{blank}{}
+\defbeamertemplate{footline}{blank}{}
 
 % --- 6. DEFINE SPECIAL SECTION BACKGROUND ---
 % This template is used ONLY for Section Title slides.
@@ -120,6 +109,8 @@ ItalicFont  = *-Italic
   { % Open scope to keep changes local to this frame
     % Switch to the clean "Section Background" defined above
     \setbeamertemplate{background}[section_bg]
+    \setbeamertemplate{headline}[blank]
+    \setbeamertemplate{footline}[blank]
     % Turn off the standard frame title for this slide
     \setbeamertemplate{frametitle}{} 
 
@@ -184,6 +175,14 @@ ItalicFont  = *-Italic
 % --- 7. TITLE PAGE CONTENT CONFIGURATION ---
 % Controls the text placement on the title page
 \setbeamertemplate{title page}{
+  
+  % Background
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[opacity=1, inner sep=0pt] at (current page.center) {
+      \includegraphics[width=\paperwidth, height=\paperheight]{images/background_main.png}
+    };
+  \end{tikzpicture}
+
   \vspace*{1cm}
   \begin{beamercolorbox}[wd=\paperwidth,dp=1ex,leftskip=2cm]{title page}
     % Title (Bold, Large)
